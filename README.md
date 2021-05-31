@@ -18,6 +18,6 @@ Esta es una pequeña app inspirada en el ejercicio de todo list perteneciente al
 
 Permite crear una lista de películas para ver durante la cuarentena, de modo que puedas entretenerte mientras te cuidás en casa.
 Podés agregar, tachar y eliminar cuantos títulos de películas quieras.
-Hecho con React y el hook useReducer.
+Hecho con React y useReducer (hook).
 
 Que lo disfrutes! ---> [Probalo aquí](https://towatch-list-app.netlify.app/)
