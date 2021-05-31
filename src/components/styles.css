@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Caveat:wght@700&family=Nunito:wght@300;400;700&display=swap');
+
+:root{
+    --light-blue: #f0f8ff;
+    --blue: #655af7;
+    --green: #d9f777;
+    --purple: #6a0958;
+    --title-font: 'Bowlby One SC', cursive;
+    --handwrite-font: 'Caveat', cursive;
+
+    --body-font: 'Nunito', sans-serif;
+    --light: 300;
+    --regular: 400;
+    --bold: 700;
+}
+
+body{
+    background-color: var(--blue);
+    color: var(--light-blue);
+    background-image: url(./fondo_cine.png);
+    background-blend-mode:darken;
+}
+
+.wrapper{
+    width: 70%;
+    height: fit-content;
+    margin: 4rem auto;
+}
+
+h1{
+    font-family: var(--title-font);
+    width: 70%;
+    margin: 2rem auto;
+    text-align: center;
+    font-size: 5rem;
+    line-height: 4rem;
+    color: var(--green);
+}
+
+h2{
+    font-family: var(--handwrite-font);
+    font-size: 2.2rem;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    transform: rotate(-8deg);
+    margin-top: -120px;
+    color: var(--purple);
+}
+
+h3{
+    width: 60%;
+    margin: 5rem auto 0 auto;
+    font-family: var(--body-font);
+    font-weight: var(--light);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 1rem;
+    border-top: 1px solid rgba(240, 248, 255, 0.548);
+    border-bottom: 1px solid rgba(240, 248, 255, 0.548);
+    padding: 1rem;
+}
+
+h4{
+    font-family: var(--body-font);
+}
+
+p{
+    cursor: pointer;
+    margin: 0;
+    font-family: var(--body-font);
+    font-weight: var(--light);
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-align: left;
+}
+
+.both-sides{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--blue);
+}
+
+.form-group{
+    margin: 3rem auto 0 auto;
+    width: 100%;
+}
+
+.form-control{
+    font-family: var(--body-font);
+    border-radius: 10px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0.8rem 0;
+    text-align: center;
+}
+.form-control::placeholder,
+.form-control:focus{
+    color: var(--blue);
+    font-family: var(--body-font);
+}
+
+.personal-btn{
+    position: relative;
+    border-radius: 7px;
+    background-color: var(--green);
+    font-family: var(--body-font);
+    font-weight: var(--bold);
+    color: var(--blue);
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+}
+.personal-btn:before,
+.personal-btn:after{
+    height:90px;
+    width:45px;
+    content: '';
+    position: absolute;
+    top: 0.9em;
+    top: calc(0.9em - 1px);
+    height: 1.2em;
+    width: 0.6em;
+    border: 2px solid var(--blue);
+    background-color: var(--blue);
+}
+.personal-btn:before {
+    left: -2px;
+    border-radius: 0 1em 1em 0;
+    border-left-color: var(--blue);
+}
+.personal-btn:after {
+    right: -2px;
+    border-radius: 1em 0 0 1em;
+    border-right-color: var(--blue);
+}
+.personal-btn:hover{
+    background-color: var(--purple);
+    color: var(--green);
+}
+form .personal-btn{
+    width: 60%;
+    margin: 0 auto 3rem auto;
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+}
+
+.list-movies{
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.list-item{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.complete{
+    text-decoration: line-through;
+    color: var(--purple);
+}
+
+@media only screen and (min-width:1024px) {
+    .wrapper{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .wrapper,
+    h1,
+    h2,
+    h3,
+    .form-control,
+    form .personal-btn{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 425px) {
+    h1{
+        font-size: 4.2rem;
+        line-height: 3.5rem;
+    }
+}
+@media only screen and (max-width: 320px) {
+    h1{
+        font-size: 3.5rem;
+        line-height: 3rem;
+    }
+    h2{
+        font-size: 1.8rem;
+        margin-top: -100px;
+    }
+    h3{
+        margin-top: 4rem;
+    }
+    p{
+        font-size: 0.9rem;
+    }
+}
+
+/* Background psd created by freepik - www.freepik.com */
