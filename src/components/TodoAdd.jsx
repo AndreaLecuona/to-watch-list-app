@@ -20,14 +20,12 @@ export const TodoAdd = ( { handleAdd } ) => {
             done: false
         };
 
-        //reemplazo este dispatch con handle add para que el dispatch se haga en el componente padre
         handleAdd( newTodo );
         reset();
     }
 
     return (
         <div className="form-group">
-            {/* <h4>Me falta ver...</h4> */}
 
                 <form onSubmit={ handleSubmit }>
                     <input type="text"
