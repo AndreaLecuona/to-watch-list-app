@@ -6,38 +6,16 @@ import { TodoAdd } from './TodoAdd';
 
 import './styles.css';
 
-//const [state, dispatch] = useReducer(reducer, initialState, init)
-//init: Es una funcion para inicializar el state en caso que éste sea procesado o haga varias acciones (retorna el initial state)
-//dispatch: Ayuda a "disparar"/enviar las acciones hacia el reducer para volver a renderizar en caso de haberse producido un cambio en el state
-
-
-// const initialState = [{
-//     id: new Date().getTime(),
-//     desc: "Barry Lyndon - Stanley Kubrick",
-//     done: false
-// }];
 
 const init = () => {
-    //LEER DE LOCAL STORAGE Y MANDARLO COMO INITIAL STATE
     return JSON.parse(localStorage.getItem( 'todos' )) || [];
-
-    // return(
-    //     [{
-    //         id: new Date().getTime(), //simulacion de id
-    //         desc: "Barry Lyndon - Stanley Kubrick",
-    //         done: false
-    //     }]
-    // )
 }
 
 
 export const TodoApp = () => {
 
-    //Extraigo del resultado del reducer una lista de items
     const [ todos, dispatch ] = useReducer(todoReducer, [], init);
 
-    //GUARDAR EN LOCAL STORAGE
-    //guardar en primer renderizado y cada vez que la lista cambie
     useEffect(() => {
         localStorage.setItem( 'todos', JSON.stringify( todos ) );
     }, [todos]);
